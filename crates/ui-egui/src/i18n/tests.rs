@@ -653,12 +653,39 @@ fn korean_representative_translations_remain_available() {
         ("", "Degree", "도 기호"),
         ("", "Style: Standard", "스타일: Standard"),
         ("", "WCS", "WCS"),
+        ("", "Open Recent", "최근 파일 열기"),
+        ("", "Edit Block Definition", "블록 정의 편집"),
+        ("", "Hatch and Gradient", "해치 및 그라데이션"),
+        ("", "Default to boundary extents", "경계의 전체 범위를 기본값으로 사용"),
+        ("", "Island detection", "아일랜드 탐지"),
+        ("", "Align Multileaders", "다중 지시선 정렬"),
+        ("", "Window selection color:", "윈도우 선택 색상:"),
+        ("", "Justify", "양쪽 맞춤"),
+        ("", "Edit Command Aliases (PGP)...", "명령 별칭 편집(PGP)..."),
+        ("", "Select using two clicks only", "두 번 클릭으로만 선택"),
+        ("", "Plot object lineweights", "객체 선가중치 플롯"),
         ("@plural", "{n} contributor", "기여자 {n}명"),
         ("@plural", "{n} commit", "커밋 {n}개"),
     ] {
         assert_eq!(ko.get(&(context, source)).copied(), Some(expected), "{context}: {source}");
     }
     assert_eq!(tr("ko", "future untranslated label"), "future untranslated label");
+}
+
+#[test]
+fn korean_new_templates_keep_inserted_data_verbatim() {
+    with_language("ko", || {
+        assert_eq!(format("Origin: {x}, {y}", &[("x", "{y}".into()), ("y", "Open".into())]), "원점: {y}, Open");
+        assert_eq!(format("Boundaries picked: {n}", &[("n", "12".into())]), "선택한 경계: 12개");
+        assert_eq!(format("Not a number or distance: {text}", &[("text", "{n} Open".into())]), "숫자 또는 거리가 아닙니다: {n} Open");
+        assert_eq!(format("Alias file: {file}", &[("file", "Open/{alias}.pgp".into())]), "별칭 파일: Open/{alias}.pgp");
+        assert_eq!(
+            format("{alias} is already defined; select it and use Edit.", &[("alias", "{command}".into())]),
+            "{command} 별칭이 이미 정의되어 있습니다. 해당 별칭을 선택한 후 편집을 사용하십시오."
+        );
+        assert_eq!(format("{command} is an unknown command.", &[("command", "MYCMD".into())]), "알 수 없는 명령입니다: MYCMD");
+        assert!(t("No alias file loaded. REINIT replaces these aliases with a file's.").contains("REINIT"));
+    });
 }
 
 #[test]
@@ -700,6 +727,8 @@ fn korean_live_switch_keeps_automation_and_drawing_and_falls_back_without_font()
     app.start("line");
     let prompt = crate::control::cmdline_state(&app);
     let commands = crate::control::all_commands(&app);
+    let (menu_request, _) = crate::ControlRequest::new("ui.menu.list", json!({}));
+    let crate::control::Outcome::Done(menu_before) = crate::control::handle(&mut app, &ctx, &menu_request) else { panic!("expected menu reply") };
     let result = app.run("ui.language", json!({"lang": "ko"})).unwrap();
     let supported = crate::theme::can_show("ko");
     assert_eq!(result["shown"], if supported { "ko" } else { "en" });
@@ -719,6 +748,8 @@ fn korean_live_switch_keeps_automation_and_drawing_and_falls_back_without_font()
     assert_eq!(app.session.state().unwrap().title, "Open");
     assert_eq!(crate::control::cmdline_state(&app), prompt);
     assert_eq!(crate::control::all_commands(&app), commands);
+    let crate::control::Outcome::Done(menu_after) = crate::control::handle(&mut app, &ctx, &menu_request) else { panic!("expected menu reply") };
+    assert_eq!(menu_before, menu_after);
     assert_eq!(t("Properties"), "Properties");
     assert!(app.run("ui.language", json!({"lang": "bad"})).is_err());
     app.run("ui.resetpalettes", json!({})).unwrap();
@@ -753,6 +784,7 @@ fn korean_dialogs_keep_source_ids() {
     }
     for (dialog, source) in [
         ("dsettings", "Drafting Settings"),
+        ("hatch", "Hatch and Gradient"),
         ("about", "About CADCraft"),
         ("commands", "Command Reference"),
         ("blocks", "Blocks"),
