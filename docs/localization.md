@@ -39,12 +39,17 @@ labels: **Zobrazení / Pohled**, **Kreslení / Kreslit**, **Kótování / Kóta*
 The translation is AI-assisted work by @Losminek, reviewed against Czech desktop and CAD UI
 conventions and an independent review pass; it has not yet been proofread by a native speaker.
 
-Korean has **1,235 rows**: 1,229 ordinary labels, four contextual menu headings, and
-two single-form count templates. It covers the union of the existing catalogs, including
-the Ukrainian reference, the current Czech catalog, Options, prompts, dialogs, and tooltips.
-The translations are original, AI-assisted Korean CAD terminology (for example, 도면층,
-치수, 모깎기, 모따기, 간격띄우기 and 객체 스냅). Independent native proofreading and
-platform-specific layout/IME validation remain follow-up work.
+Korean has **1,383 rows**: 1,377 ordinary labels, four contextual menu headings, and
+two single-form count templates. This refresh adds the 95 keys present in Turkish but
+missing from Korean, plus 53 additional keys found in the other catalogs on `main` at
+`0b32c2e`: block editing, Hatch and Gradient, multileaders, selection settings, recent
+files, text editing, command aliases, Express Tools, dimension properties and plot settings.
+Existing Korean rows are unchanged; the catalog covers the current catalog union.
+Translations are original, AI-assisted Korean CAD terminology (for example, 도면층,
+치수, 모깎기, 모따기, 간격띄우기 and 객체 스냅). Source keys, command identifiers,
+clickable keywords, placeholders and automation responses retain their existing spelling.
+Independent native proofreading and platform-specific layout/IME validation remain
+follow-up work; this catalog refresh does not claim those checks are complete.
 
 Brazilian Portuguese has 1,231 catalog rows and also covers the reference catalog and every marked UI
 literal: commands, menus, tool groups and tooltips, object snaps, drafting prompts, dialogs and
