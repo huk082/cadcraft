@@ -1238,3 +1238,151 @@ menu	View	보기
 menu	Draw	그리기
 menu	Dimension	치수
 menu	Modify	수정
+	Break-line Symbol	절단선 기호
+	Convert Text to Mtext	문자를 여러 줄 문자로 변환
+	Evaluate LISP	LISP 실행
+	Explode Attributes to Text	속성을 문자로 분해
+	Express Tools	Express Tools
+	Align Multileaders	다중 지시선 정렬
+	Collect	모으기
+	Collect Multileaders	다중 지시선 모으기
+	Edit Multileader	다중 지시선 편집
+	Load Application...	응용프로그램 로드...
+	Move/Copy/Rotate	이동/복사/회전
+	Open Recent	최근 파일 열기
+	Clear Recent Files	최근 파일 목록 지우기
+	Add to Working Set	작업 세트에 추가
+	Edit Reference In-Place	참조 내부 편집
+	Save Reference Edits	참조 편집 내용 저장
+	Working Set	작업 세트
+	Xref and Block In-place Editing	외부 참조 및 블록 내부 편집
+	Crossing selection color:	걸침 선택 색상:
+	Exclude:	제외:
+	Grips	그립
+	Groups	그룹
+	Hatches	해치
+	Indicate selection area	선택 영역 표시
+	Multiline text	여러 줄 문자
+	Object grouping	객체 그룹화
+	Object selection limit for display of grips	그립을 표시할 최대 선택 객체 수
+	Objects on locked layers	잠긴 도면층의 객체
+	Preview	미리보기
+	Selection Area Effect	선택 영역 효과
+	Selection Preview Filter	선택 미리보기 필터
+	Selection area opacity:	선택 영역 불투명도:
+	Selection effect color	선택 효과 색상
+	Selection modes	선택 모드
+	Selection preview	선택 미리보기
+	Show grips	그립 표시
+	Tables	테이블
+	Visual Effect Settings	시각 효과 설정
+	Visual Effect Settings...	시각 효과 설정...
+	When a command is active	명령 실행 중
+	When no command is active	명령 대기 중
+	Window selection color:	윈도우 선택 색상:
+	Xrefs	외부 참조
+	Animation Effects	애니메이션 효과
+	Animation effects	애니메이션 효과
+	Interface scale	인터페이스 배율
+	Query Texts	문자 조회
+	Analyze Shapes	형상 분석
+	Hatch Pick	해치 경계 선택
+	Hatch and Gradient	해치 및 그라데이션
+	Color 1	색상 1
+	Color 2	색상 2
+	Shape	형태
+	Curved	곡선형
+	Spherical	구형
+	Hemispherical	반구형
+	Inverted	반전
+	Centered	중심 맞춤
+	Hatch origin	해치 원점
+	Use current origin	현재 원점 사용
+	Specified origin	지정된 원점
+	Click to set new origin	클릭하여 새 원점 지정
+	Default to boundary extents	경계의 전체 범위를 기본값으로 사용
+	Bottom left	왼쪽 아래
+	Bottom right	오른쪽 아래
+	Top left	왼쪽 위
+	Top right	오른쪽 위
+	Boundaries	경계
+	Add: Pick points	추가: 점 선택
+	Add: Select objects	추가: 객체 선택
+	Boundaries picked: {n}	선택한 경계: {n}개
+	Select boundaries to remove	제거할 경계 선택
+	Island	아일랜드
+	Associative	연관
+	Create separate hatches	별도의 해치 작성
+	Island detection	아일랜드 탐지
+	Normal	일반
+	Outer	외부
+	Ignore	무시
+	Origin: {x}, {y}	원점: {x}, {y}
+	Sheet Books to PDF...	시트북을 PDF로...
+	Not a number or distance: {text}	숫자 또는 거리가 아닙니다: {text}
+	Dynamic Block Data	동적 블록 데이터
+	Custom	사용자 정의
+	Dynamic Block Reference	동적 블록 참조
+	Set Dynamic Property	동적 특성 설정
+	Dynamic Block Grips	동적 블록 그립
+	Drag Dynamic Grip	동적 그립 끌기
+	Save Block	블록 저장
+	Save Block As	다른 이름으로 블록 저장
+	Close Block Editor	블록 편집기 닫기
+	Unsaved changes	저장하지 않은 변경 사항
+	Edit Block Definition	블록 정의 편집
+	Block to create or edit	작성하거나 편집할 블록
+	Open in Block Editor	블록 편집기에서 열기
+	This drawing	현재 도면
+	contains authoring elements. Open in Block Editor?	블록 작성 요소가 포함되어 있습니다. 블록 편집기에서 여시겠습니까?
+	New block	새 블록
+	Italic	기울임꼴
+	Underline	밑줄
+	Overline	윗줄
+	Justify	양쪽 맞춤
+	Text color	문자 색상
+	Click the ruler to add a tab stop, right-click to remove one	눈금자를 클릭하여 탭 정지점을 추가하고, 마우스 오른쪽 버튼을 클릭하여 제거합니다
+	Select using two clicks only	두 번 클릭으로만 선택
+	Define each corner of the selection window with a separate click.	선택 윈도우의 각 구석을 한 번씩 클릭하여 지정합니다.
+	Type an alias name.	별칭 이름을 입력하십시오.
+	Choose the command the alias starts.	별칭으로 실행할 명령을 선택하십시오.
+	{command} is an unknown command.	알 수 없는 명령입니다: {command}
+	{alias} is already defined; select it and use Edit.	{alias} 별칭이 이미 정의되어 있습니다. 해당 별칭을 선택한 후 편집을 사용하십시오.
+	More than {n} aliases.	별칭이 {n}개를 초과합니다.
+	Alias file: {file}	별칭 파일: {file}
+	No alias file loaded. REINIT replaces these aliases with a file's.	로드된 별칭 파일이 없습니다. REINIT 명령은 이 별칭들을 파일의 별칭으로 교체합니다.
+	Alias	별칭
+	Command	명령
+	overrides built-in	기본 제공 별칭 재정의
+	built-in	기본 제공
+	Add…	추가…
+	Edit…	편집…
+	Save alias	별칭 저장
+	Discard	변경 사항 버리기
+	Customize	사용자화
+	Edit Command Aliases (PGP)...	명령 별칭 편집(PGP)...
+	Arrow size	화살표 크기
+	Dim scale overall	전체 치수 축척
+	Precision	정밀도
+	Layouts	배치
+	Printer/plotter	프린터/플로터
+	Paper size	용지 크기
+	Orientation	방향
+	Portrait	세로
+	Landscape	가로
+	Plot area	플롯 영역
+	Fit to paper	용지에 맞춤
+	Center the plot	플롯 중심 맞춤
+	Plot object lineweights	객체 선가중치 플롯
+	Plot transparency	투명도 플롯
+	Apply to Layout	배치에 적용
+	Enter name of LISP file to load	로드할 LISP 파일 이름 입력
+	Enter geometric characteristic	기하 공차 특성 입력
+	Enter block names to extract	추출할 블록 이름 입력
+	Limits	도면 한계
+	Plot offset	플롯 간격띄우기
+	X offset (mm)	X 간격띄우기(mm)
+	Y offset (mm)	Y 간격띄우기(mm)
+	First corner	첫 번째 구석
+	Opposite corner	반대 구석
+	Window <	윈도우 <
