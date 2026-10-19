@@ -1318,7 +1318,7 @@ menu	Modify	수정
 	Outer	외부
 	Ignore	무시
 	Origin: {x}, {y}	원점: {x}, {y}
-	Sheet Books to PDF...	시트북을 PDF로...
+	Sheet Books to PDF...	도면집을 PDF로...
 	Not a number or distance: {text}	숫자 또는 거리가 아닙니다: {text}
 	Dynamic Block Data	동적 블록 데이터
 	Custom	사용자 정의
